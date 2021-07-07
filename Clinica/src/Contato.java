@@ -1,8 +1,6 @@
-public class Contato {
+public class Contato{
     public String telefone;
     public String email;
-
-    public Contato(){}
 
     public Contato(String telefone){
         this.telefone = telefone;

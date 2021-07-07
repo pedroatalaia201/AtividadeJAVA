@@ -5,7 +5,7 @@ import java.util.List;
 class App{
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
-        List<Paciente> list = new ArrayList<>();
+        List<Pessoa> list = new ArrayList<>();
 
         int op = 0;
         while(op != 3){
@@ -35,11 +35,12 @@ class App{
                 System.out.print("E-mail: ");
                 String email = read.nextLine();
 
-                list.add(new Paciente(nome, sexo, altura, peso, email, telefone, naturalidade));                       
+                list.add(new Paciente(nome, sexo, altura, peso, email, telefone, naturalidade));  
+                // list.add(new Contato(telefone, email));                     
             }
 
             if(op == 2){
-                for (Paciente pessoa : list) {
+                for (Pessoa pessoa : list) {
                     pessoa.imprimirFicha();
                 }
             }

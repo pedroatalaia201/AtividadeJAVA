@@ -2,6 +2,7 @@ public abstract class Pessoa {
     private String nome;
     private char sexo;
     private String naturalidade;
+    public Contato contato;
 
     public Pessoa(String nome, char sexo, String naturalidade){
         this.nome = nome;

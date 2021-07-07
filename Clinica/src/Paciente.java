@@ -2,9 +2,9 @@ public class Paciente extends Pessoa {
     public double altura;
     public double peso;
 
-    public Contato contato = new Contato();
+    //public Contato contato = new Contato();
 
-    public Paciente(String nome, char sexo, double altura, double peso, String email, String telefone, String naturalidade){
+    public Paciente(String nome, char sexo, double altura, double peso,String email, String telefone, String naturalidade){
         super(nome, sexo, naturalidade);
         this.altura = altura;
         this.peso = peso; 
