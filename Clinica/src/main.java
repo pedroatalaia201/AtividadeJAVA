@@ -30,13 +30,22 @@ class App{
 
                 System.out.println("Digite os contatos do paciente: ");
                 System.out.print("Telefone: ");
-                String telefone = read.nextLine();
+                String telefone = read.nextLine();               
 
-                System.out.print("E-mail: ");
-                String email = read.nextLine();
+                System.out.println("O paciente possue e-mail? (s/n)");
+                char possue = read.nextLine().charAt(0);
 
-                list.add(new Paciente(nome, sexo, altura, peso, email, telefone, naturalidade));  
-                // list.add(new Contato(telefone, email));                     
+                if(possue == 's'){
+                    System.out.print("E-mail: ");
+                    String email = read.nextLine();
+
+                    Contato contato = new Contato(telefone, email);
+                    list.add(new Paciente(nome, sexo, altura, peso, contato, naturalidade));
+                }
+                else{
+                    Contato contato = new Contato(telefone);
+                    list.add(new Paciente(nome, sexo, altura, peso, contato, naturalidade));
+                }                                                   
             }
 
             if(op == 2){
